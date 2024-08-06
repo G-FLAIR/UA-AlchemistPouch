@@ -18,8 +18,8 @@ namespace Server.Items
 		{
 			Weight = 2.0;
 			MaxItems = 50;
-			ItemID = 0x5776;
-			Name = "alchemist's belt pouch";
+			ItemID = 0x1C10;
+			Name = "alchemist's pouch";
 			Hue = 0xAFE;
 		}
 
