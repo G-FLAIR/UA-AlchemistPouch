@@ -1,77 +1,78 @@
-using System; 
-using Server; 
-using Server.Gumps; 
-using Server.Network;
-using Server.Items;
-using Server.Mobiles;
-using Server.Commands;
+            public ClaimListGump( AnimalTrainer trainer, Mobile from, List<BaseCreature> list ) : base( 25, 25 )
+            {
+                m_Trainer = trainer;
+                m_From = from;
+                m_List = list;
 
-namespace Server.Gumps
-{ 
-   public class TamingBODDealerGump : Gump 
-   { 
-      public static void Initialize() 
-      { 
-         CommandSystem.Register( "TamingBODDealerGump", AccessLevel.GameMaster, new CommandEventHandler( TamingBODDealerGump_OnCommand ) ); 
-      } 
+                from.CloseGump( typeof( ClaimListGump ) );
 
-      private static void TamingBODDealerGump_OnCommand( CommandEventArgs e ) 
-      { 
-         e.Mobile.SendGump( new TamingBODDealerGump( e.Mobile ) ); 
-      } 
+                this.Closable=true;
+                this.Disposable=true;
+                this.Dragable=true;
+                this.Resizable=false;
 
-      public TamingBODDealerGump( Mobile owner ) : base( 50,50 ) 
-      { 
-//----------------------------------------------------------------------------------------------------
+                AddPage(0);
+                const int height = 600;
+                const int maxPetsPerColumn = 10;
+                int petColumns = Math.Max(2, (int)Math.Ceiling((double)list.Count / maxPetsPerColumn)); // 10 pets per column
 
-				AddPage( 0 );
-			AddImageTiled(  54, 33, 369, 400, 2624 );
-			AddAlphaRegion( 54, 33, 369, 400 );
+                int width = 420 + 200 * (petColumns - 1);
 
-			AddImageTiled( 416, 39, 44, 389, 203 );
-//--------------------------------------Window size bar--------------------------------------------
-			
-			AddImage( 97, 49, 9005 );
-			AddImageTiled( 58, 39, 29, 390, 10460 );
-			AddImageTiled( 412, 37, 31, 389, 10460 );
-			AddLabel( 140, 60, 0x34, "Monster Contracts" );
-			
+                // Card - Border
+                AddImageTiled(0, 0, width, height, 155);
 
-			AddHtml( 107, 140, 300, 230, "<BODY>" +
-//----------------------/----------------------------------------------/
-"<BASEFONT COLOR=YELLOW>Hello there. Can I speak with you one second? I have a favor to ask and I wonder if you could help me.<BR><BR>I have in my possesion contracts  from buyers in the lands for certain beasts.  I will gladly give you the contracts and only keep a small commission for myself if you could fill the contracts for me.<BR>" +
-"<BASEFONT COLOR=YELLOW>Will you help me fill my contracts?<BR><BR>Oh, Thank you my friend. " + "</BODY>", false, true);
+                // Card - Background
+                const int padding = 2;
+                AddImageTiled(padding, padding, width - 2 * padding, height - 2 * padding, 129);
 
-			AddImage( 430, 9, 10441);
-			AddImageTiled( 40, 38, 17, 391, 9263 );
-			AddImage( 6, 25, 10421 );
-			AddImage( 34, 12, 10420 );
-			AddImageTiled( 94, 25, 342, 15, 10304 );
-			AddImageTiled( 40, 427, 415, 16, 10304 );
-			AddImage( -10, 314, 10402 );
-			AddImage( 56, 150, 10411 );
-			AddImage( 155, 120, 2103 );
-			AddImage( 136, 84, 96 );
+                // Overlay images
+                if (petColumns < 3)
+                {
+                    AddImage(7, 8, 133); // Top Left
+                    AddImage(218, 47, 132); // Top Center
+                    AddImage(380, 8, 134); // Top Right
 
-			AddButton( 225, 390, 0xF7, 0xF8, 0, GumpButtonType.Reply, 0 ); 
+                    AddImage(8, 517, 139); // Bottom Left
+                    AddImage(164, 551, 140); // Bottom Center
+                    AddImage(269, 342, 147); // Bottom Right
+                }
+                else // Good luck ... We don't expect more than 3 columns
+                {
+                    AddImage(7, 8, 133); // Top Left
+                    AddImageTiled(218, 47, 400, 10, 132); // Top Center
+                    AddImage(580, 8, 134); // Top Right
 
-//--------------------------------------------------------------------------------------------------------------
-      } 
+                    AddImage(28, 517, 139); // Bottom Left
+                    AddImageTiled(195, 551, 400, 30, 140); // Bottom Center
+                    AddImage(489, 342, 147); // Bottom Right
+                }
+...
+            }
 
-      public override void OnResponse( NetState state, RelayInfo info ) //Function for GumpButtonType.Reply Buttons 
-      { 
-         Mobile from = state.Mobile; 
 
-         switch ( info.ButtonID ) 
-         { 
-            case 0: //Case uses the ActionIDs defenied above. Case 0 defenies the actions for the button with the action id 0 
-            { 
-               //Cancel 
-               from.SendMessage( "The contract was placed in your bag. Good Hunting" );
-               break; 
-            } 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-         }
-      }
-   }
-}
+
+...
+                int maxCount = Server.Mobiles.AnimalTrainer.GetMaxStabled( from );
+                AddHtml( 174, 68, 300, 20, @"<BODY><BASEFONT Color=#FBFBFB><BIG> " + list.Count + " OF " + maxCount + " PETS IN THE STABLE</BIG></BASEFONT></BODY>", (bool)false, (bool)false);
+
+                for (int column = 0; column < petColumns; column++)
+                {
+                    int x = 105 + 220 * column;
+                    int y = 95;
+
+                    int offset = maxPetsPerColumn * column;
+                    for (int i = 0; i < Math.Min(maxPetsPerColumn, list.Count - offset); ++i)
+                    {
+                        BaseCreature pet = list[i + offset];
+
+                        if (pet == null || pet.Deleted)
+                            continue;
+
+                        y = y + 35;
+
+                        AddHtml(x + 40, y, 165, 20, @"<BODY><BASEFONT Color=#FCFF00><BIG>" + pet.Name + "</BIG></BASEFONT></BODY>", (bool)false, (bool)false);
+                        AddButton(x, y, 4005, 4005, (i + offset + 1), GumpButtonType.Reply, 0);
+                    }
+                }
