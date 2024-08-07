@@ -19,7 +19,7 @@ namespace Server.Items
 			Weight = 2.0;
 			MaxItems = 50;
 			ItemID = 0x2C7E;
-			Name = "alchemist's pouch";
+			Name = "potion's pouch";
 			Hue = 0xAFE;
 		}
 
@@ -36,7 +36,7 @@ namespace Server.Items
 				return base.OnDragDropInto(from, dropped, p);
 			}
 
-			from.SendMessage("This belt pouch is for alchemy potions.");
+			from.SendMessage("This pouch is for alchemy potions.");
 			return false;
         }
 
@@ -68,9 +68,8 @@ namespace Server.Items
 
 				AddPage(0);
 
-				AddImage(0, 0, 7027, Server.Misc.PlayerSettings.GetGumpHue( from ));
-				AddHtml( 13, 13, 300, 20, @"<BODY><BASEFONT Color=" + color + ">ALCHEMY BELT POUCH</BASEFONT></BODY>", (bool)false, (bool)false);
-				AddImage(531, 51, 10900);
+				AddHtml( 13, 13, 10000, 20, @"<BODY><BASEFONT Color=" + color + ">POTION POUCH</BASEFONT></BODY>", (bool)false, (bool)false);
+				AddImage(531, 51, 1260); // BLACK BACKGROUND
 				AddButton(863, 10, 4017, 4017, 0, GumpButtonType.Reply, 0);
 
 
@@ -808,7 +807,7 @@ namespace Server.Items
 			private AlchemistPouch AlchemistBag; 
 			private Mobile m_From; 
 
-			public BagWindow( Mobile from, AlchemistPouch bag ) : base( 6172, 1 ) 
+			 public BagWindow( Mobile from, AlchemistPouch bag ) : base( 132, 1 )
 			{ 
 				m_From = from; 
 				AlchemistBag = bag; 
