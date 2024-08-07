@@ -67,7 +67,7 @@ namespace Server.Items
 				this.Resizable=false;
 
 				AddPage(0);
-
+				AddBackground( 0, 0, 800, 600, 9270 );
 				AddHtml( 13, 13, 10000, 20, @"<BODY><BASEFONT Color=" + color + ">POTION POUCH</BASEFONT></BODY>", (bool)false, (bool)false);
 				AddImage(531, 51, 1260); // BLACK BACKGROUND
 				AddButton(863, 10, 4017, 4017, 0, GumpButtonType.Reply, 0);
