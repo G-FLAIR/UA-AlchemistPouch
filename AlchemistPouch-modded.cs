@@ -18,7 +18,7 @@ namespace Server.Items
 		{
 			Weight = 2.0;
 			MaxItems = 50;
-			ItemID =  0x2C7E;
+			ItemID = 0x5776;
 			Name = "alchemist's belt pouch";
 			Hue = 0xAFE;
 		}
@@ -68,9 +68,9 @@ namespace Server.Items
 
 				AddPage(0);
 
-				AddBackGround(0,0,600,800, 10);
+				AddImage(0, 0, 7027, Server.Misc.PlayerSettings.GetGumpHue( from ));
 				AddHtml( 13, 13, 300, 20, @"<BODY><BASEFONT Color=" + color + ">ALCHEMY BELT POUCH</BASEFONT></BODY>", (bool)false, (bool)false);
-				AddImage(531, 51, 1260); // BLACK BACKGROUND
+				AddImage(531, 51, 10900);
 				AddButton(863, 10, 4017, 4017, 0, GumpButtonType.Reply, 0);
 
 
