@@ -68,7 +68,7 @@ namespace Server.Items
 
 				AddPage(0);
 
-				AddImage(0, 0, 7027, Server.Misc.PlayerSettings.GetGumpHue( from ));
+				///AddImage(0, 0, 7027, Server.Misc.PlayerSettings.GetGumpHue( from )); not working on UA
 				AddHtml( 13, 13, 300, 20, @"<BODY><BASEFONT Color=" + color + ">ALCHEMY BELT POUCH</BASEFONT></BODY>", (bool)false, (bool)false);
 				AddImage(531, 51, 10900);
 				AddButton(863, 10, 4017, 4017, 0, GumpButtonType.Reply, 0);
