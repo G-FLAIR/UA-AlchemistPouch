@@ -18,7 +18,7 @@ namespace Server.Items
 		{
 			Weight = 2.0;
 			MaxItems = 50;
-			ItemID = 0x5776;
+			ItemID = 0x2C7E;
 			Name = "alchemist's belt pouch";
 			Hue = 0xAFE;
 		}
@@ -68,13 +68,39 @@ namespace Server.Items
 
 				AddPage(0);
 
+				const int height = 800;
+				const int maxPetsPerColumn = 10;
+				
+				int width = 420 + 550;
+
+		                // Card - Border
+				AddImageTiled(0, 0, width, height, 155);
+
+		                // Card - Background
+                		const int padding = 2;
+                		AddImageTiled(padding, padding, width - 2 * padding, height - 2 * padding, 129);
+
+				AddImage(7, 8, 133); // Top Left
+				AddImage(218, 47, 132); // Top Center
+				AddImage(width, 8, 134); // Top Right
+
+                    		AddImage(8, 517, 139); // Bottom Left
+                    		AddImage(164, 551, 140); // Bottom Center
+                    		AddImage(269, 342, 147); // Bottom Right	
+
+
+
 				///AddImage(0, 0, 7027, Server.Misc.PlayerSettings.GetGumpHue( from )); not working on UA
-				AddHtml( 13, 13, 300, 20, @"<BODY><BASEFONT Color=" + color + ">ALCHEMY BELT POUCH</BASEFONT></BODY>", (bool)false, (bool)false);
-				AddImage(531, 51, 10900);
+				
+
+				//AddHtml( 174, 68, 300, 20,----UA placement --- old replaced AddHtml( 13, 13, 300, 20,
+				AddHtml( 174, 68, 300, 20, @"<BODY><BASEFONT Color=" + color + ">ALCHEMY BELT POUCH</BASEFONT></BODY>", (bool)false, (bool)false);
+				AddImage(531, 51, 1313); //black backgroud
 				AddButton(863, 10, 4017, 4017, 0, GumpButtonType.Reply, 0);
+				
 
+				AddHtml( 150, 110, 300, 20, @"<BODY><BASEFONT Color=" + color + ">This bag is only for potions created by alchemists, which will have their weight greatly reduced while in this bag. Here you can configure a quick belt pouch for these potions. This is also the only place where you can open and close the quick belt pouch, which is a bar that will open with icons for easy potion access. You can configure the bar to be either horizontal or vertical. You can choose to display abbreviated names next to the icons. You have to select which potions will appear in the bar and you can only effectively use one alchemy belt pouch at a time.</BASEFONT></BODY>", (bool)true, (bool)true);
 
-				AddHtml( 15, 57, 497, 176, @"<BODY><BASEFONT Color=" + color + ">This bag is only for potions created by alchemists, which will have their weight greatly reduced while in this bag. Here you can configure a quick belt pouch for these potions. This is also the only place where you can open and close the quick belt pouch, which is a bar that will open with icons for easy potion access. You can configure the bar to be either horizontal or vertical. You can choose to display abbreviated names next to the icons. You have to select which potions will appear in the bar and you can only effectively use one alchemy belt pouch at a time.</BASEFONT></BODY>", (bool)false, (bool)false);
 
 				// ------------------------------------------------------------------------
 
@@ -808,7 +834,7 @@ namespace Server.Items
 			private AlchemistPouch AlchemistBag; 
 			private Mobile m_From; 
 
-			public BagWindow( Mobile from, AlchemistPouch bag ) : base( 6172, 1 ) 
+			public BagWindow( Mobile from, AlchemistPouch bag ) : base( 132, 1 ) 
 			{ 
 				m_From = from; 
 				AlchemistBag = bag; 
