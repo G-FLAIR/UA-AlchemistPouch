@@ -82,11 +82,14 @@ namespace Server.Items
 
 				AddImage(7, 8, 133); // Top Left
 				AddImage(218, 47, 132); // Top Center
-				AddImage(width, 8, 134); // Top Right
+				AddImage(width - 220, 8, 134); // Top Right
 
-                    		AddImage(8, 517, 139); // Bottom Left
-                    		AddImage(164, 551, 140); // Bottom Center
-                    		AddImage(269, 342, 147); // Bottom Right	
+
+				// alignment for bottom image: 28, 517 = 195, 551 = 489, 342
+                    		AddImage(10, 720, 139); // Bottom Left
+                    		AddImage(218, 755, 140); // Bottom Center
+				AddImage(340, 755, 140); // Bottom Center2
+                    		AddImage(630, 547, 147); // Bottom Right	
 
 
 
@@ -95,11 +98,11 @@ namespace Server.Items
 
 				//AddHtml( 174, 68, 300, 20,----UA placement --- old replaced AddHtml( 13, 13, 300, 20,
 				AddHtml( 174, 68, 300, 20, @"<BODY><BASEFONT Color=" + color + ">ALCHEMY BELT POUCH</BASEFONT></BODY>", (bool)false, (bool)false);
-				AddImage(531, 51, 1313); //black backgroud
+				AddImage(500, 47, 132); //Top center2 or VAMPIRE LOL 1313
 				AddButton(863, 10, 4017, 4017, 0, GumpButtonType.Reply, 0);
 				
 
-				AddHtml( 150, 110, 300, 20, @"<BODY><BASEFONT Color=" + color + ">This bag is only for potions created by alchemists, which will have their weight greatly reduced while in this bag. Here you can configure a quick belt pouch for these potions. This is also the only place where you can open and close the quick belt pouch, which is a bar that will open with icons for easy potion access. You can configure the bar to be either horizontal or vertical. You can choose to display abbreviated names next to the icons. You have to select which potions will appear in the bar and you can only effectively use one alchemy belt pouch at a time.</BASEFONT></BODY>", (bool)true, (bool)true);
+				AddHtml( 15, 57, 497, 176, @"<BODY><BASEFONT Color=" + color + ">This bag is only for potions created by alchemists, which will have their weight greatly reduced while in this bag. Here you can configure a quick belt pouch for these potions. This is also the only place where you can open and close the quick belt pouch, which is a bar that will open with icons for easy potion access. You can configure the bar to be either horizontal or vertical. You can choose to display abbreviated names next to the icons. You have to select which potions will appear in the bar and you can only effectively use one alchemy belt pouch at a time.</BASEFONT></BODY>", (bool)true, (bool)true);
 
 
 				// ------------------------------------------------------------------------
