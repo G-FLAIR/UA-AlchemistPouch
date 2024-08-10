@@ -87,9 +87,9 @@ namespace Server.Items
 
 				// alignment for bottom image: 28, 517 = 195, 551 = 489, 342
                     		AddImage(10, 720, 139); // Bottom Left
-                    		AddImage(218, 755, 140); // Bottom Center
-				AddImage(340, 755, 140); // Bottom Center2
-                    		AddImage(630, 546, 147); // Bottom Right	
+                    		AddImage(218, 754, 140); // Bottom Center
+				AddImage(340, 754, 140); // Bottom Center2
+                    		AddImage(630, 544, 147); // Bottom Right	
 
 
 
@@ -97,27 +97,27 @@ namespace Server.Items
 				
 
 				//AddHtml( 174, 68, 300, 20,----UA placement --- old replaced AddHtml( 13, 13, 300, 20,
-				AddHtml( 174, 68, 300, 20, @"<BODY><BASEFONT Color=" + color + ">ALCHEMY BELT POUCH</BASEFONT></BODY>", (bool)false, (bool)false);
+				AddHtml( 400, 68, 300, 20, @"<BODY><BASEFONT Color=" + color + ">ALCHEMY BELT POUCH</BASEFONT></BODY>", (bool)false, (bool)false);
 				AddImage(450, 47, 132); //Top center2 or VAMPIRE LOL 1313
 				AddButton(863, 10, 4017, 4017, 0, GumpButtonType.Reply, 0);
 				
 
-				AddHtml( 150, 110, 300, 20, @"<BODY><BASEFONT Color=" + color + ">This bag is only for potions created by alchemists, which will have their weight greatly reduced while in this bag. Here you can configure a quick belt pouch for these potions. This is also the only place where you can open and close the quick belt pouch, which is a bar that will open with icons for easy potion access. You can configure the bar to be either horizontal or vertical. You can choose to display abbreviated names next to the icons. You have to select which potions will appear in the bar and you can only effectively use one alchemy belt pouch at a time.</BASEFONT></BODY>", (bool)false, (bool)false);
+				AddHtml( 120, 110, 800, 200, @"<BODY><BASEFONT Color=" + color + ">This bag is only for potions created by alchemists, which will have their weight greatly reduced while in this bag. Here you can configure a quick belt pouch for these potions. This is also the only place where you can open and close the quick belt pouch, which is a bar that will open with icons for easy potion access. You can configure the bar to be either horizontal or vertical. You can choose to display abbreviated names next to the icons. You have to select which potions will appear in the bar and you can only effectively use one alchemy belt pouch at a time.</BASEFONT></BODY>", (bool)false, (bool)false);
 
 
 				// ------------------------------------------------------------------------
 
 				int bDisplay = 3609; if ( bag.Titles > 0 ){ bDisplay = 4017; }
-					AddButton(15, 231, bDisplay, bDisplay, 52, GumpButtonType.Reply, 0);
-						AddHtml( 55, 231, 229, 20, @"<BODY><BASEFONT Color=" + color + ">Display Abbreviations</BASEFONT></BODY>", (bool)false, (bool)false);
+					AddButton(330, 231, bDisplay, bDisplay, 52, GumpButtonType.Reply, 0);
+						AddHtml( 370, 231, 229, 20, @"<BODY><BASEFONT Color=" + color + ">Display Abbreviations</BASEFONT></BODY>", (bool)false, (bool)false);
 				int bVertical = 3609; if ( bag.Bar > 0 ){ bVertical = 4017; }
-					AddButton(15, 265, bVertical, bVertical, 53, GumpButtonType.Reply, 0);
-						AddHtml( 55, 265, 225, 20, @"<BODY><BASEFONT Color=" + color + ">Vertical Belt Pouch</BASEFONT></BODY>", (bool)false, (bool)false);
+					AddButton(330, 265, bVertical, bVertical, 53, GumpButtonType.Reply, 0);
+						AddHtml( 370, 265, 225, 20, @"<BODY><BASEFONT Color=" + color + ">Vertical Belt Pouch</BASEFONT></BODY>", (bool)false, (bool)false);
 
-				AddButton(353, 231, 4029, 4029, 50, GumpButtonType.Reply, 0);
-					AddHtml( 393, 231, 150, 20, @"<BODY><BASEFONT Color=" + color + ">Open Belt Pouch</BASEFONT></BODY>", (bool)false, (bool)false);
-				AddButton(353, 265, 4020, 4020, 51, GumpButtonType.Reply, 0);
-					AddHtml( 393, 265, 150, 20, @"<BODY><BASEFONT Color=" + color + ">Close Belt Pouch</BASEFONT></BODY>", (bool)false, (bool)false);
+				AddButton(645, 231, 4029, 4029, 50, GumpButtonType.Reply, 0);
+					AddHtml( 685, 231, 150, 20, @"<BODY><BASEFONT Color=" + color + ">Open Belt Pouch</BASEFONT></BODY>", (bool)false, (bool)false);
+				AddButton(645, 265, 4020, 4020, 51, GumpButtonType.Reply, 0);
+					AddHtml( 685, 265, 150, 20, @"<BODY><BASEFONT Color=" + color + ">Close Belt Pouch</BASEFONT></BODY>", (bool)false, (bool)false);
 
 				// ------------------------------------------------------------------------
 
@@ -191,6 +191,7 @@ namespace Server.Items
 					AddImage(370, 745, 9530);
 						AddHtml( 410, 750, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Mana (L)</BASEFONT></BODY>", (bool)false, (bool)false);
 
+				// button - image - html (0 + 40 + 40) witdh differences
 				AddButton(645, 372, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
 					AddImage(685, 367, 9531);
 						AddHtml( 725, 372, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Mana</BASEFONT></BODY>", (bool)false, (bool)false);
