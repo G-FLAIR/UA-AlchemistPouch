@@ -125,137 +125,137 @@ namespace Server.Items
 
                 // button - image - html (0 + 40 + 40) witdh differences = 
                 AddButton(120, 335, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 335, 9780);
+                AddItem(160, 335, 0x0F08);
                 AddHtml( 200, 335, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Agility</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(120, 367, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 367, 9780);
+                AddItem(160, 367, 0x256A);
                 AddHtml( 200, 367, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Agility (G)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(120, 399, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 399, 9780);
+                AddItem(160, 399, 0x180f, 0xAD8);
                 AddHtml( 200, 399, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Conflagration</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(120, 431, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 431, 9780);
+                AddItem(160, 431, 0x2406, 0xAD8);
                 AddHtml( 200, 431, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Conflagration (G)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(120, 463, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 463, 9780);
+                AddItem(160, 463, 0x180f, 0x495);
                 AddHtml( 200, 463, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Confusion Blast</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(120, 495, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 495, 9780);
+                AddItem(160, 495, 0x2406, 0x495);
                 AddHtml( 200, 495, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Confusion Blast (G)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(120, 527, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 527, 9780);
+                AddItem(160, 527, 0x233B);
                 AddHtml( 200, 527, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Cure (L)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(120, 559, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 559, 9780);
+                AddItem(160, 559, 0x0F07);
                 AddHtml( 200, 559, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Cure</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(120, 591, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 591, 9780);
+                AddItem(160, 591, 0x24EA);
                 AddHtml( 200, 591, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Cure (G)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(120, 623, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 623, 9780);
+                AddItem(160, 623, 0x2407);
                 AddHtml( 200, 623, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Explosion (L)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(120, 655, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(160, 655, 9780);
+                AddItem(160, 655, 0x0F0D);
                 AddHtml( 200, 655, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Explosion</BASEFONT></BODY>", (bool)false, (bool)false);
 
                 // button - image - html (0 + 40 + 40) witdh differences
 
 
                 AddButton(413, 335, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 335, 9780);
+                AddItem(453, 335, 0x2408);
                 AddHtml( 493, 335, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Explosion (G)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(413, 367, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 367, 9780);
+                AddItem(453, 367, 0x180f, 0xAF3);
                 AddHtml( 493, 367, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Frostbite</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(413, 399, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 399, 9780);
+                AddItem(453, 399, 0x2406, 0xAF3);
                 AddHtml( 493, 399, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Frostbite (G)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
-				AddButton(413, 431, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 431, 9780);
+		AddButton(413, 431, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
+                AddItem(453, 431, 0x25FD);
                 AddHtml( 493, 431, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Heal (L)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
-				AddButton(413, 463, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 463, 9780);
+		AddButton(413, 463, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
+                AddItem(453, 463, 0xF0C);
                 AddHtml( 493, 463, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Heal</BASEFONT></BODY>", (bool)false, (bool)false);
                 
-				AddButton(413, 495, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 495, 9780);
+		AddButton(413, 495, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
+                AddItem(453, 495, 0x25FE);
                 AddHtml( 493, 495, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Heal (G)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
-				AddButton(413, 527, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 527, 9780);
+		AddButton(413, 527, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
+                AddItem(453, 527, 0x23BD, 0x490);
                 AddHtml( 493, 527, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Invisibility (L)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
-				AddButton(413, 559, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 559, 9780);
+		AddButton(413, 559, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
+                AddItem(453, 559, 0x180F, 0x490);
                 AddHtml( 493, 559, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Invisibility</BASEFONT></BODY>", (bool)false, (bool)false);
                 
-				AddButton(413, 591, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 591, 9780);
+		AddButton(413, 591, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
+                AddItem(453, 591, 0x2406, 0x490);
                 AddHtml( 493, 591, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Invisibility (G)</BASEFONT></BODY>", (bool)false, (bool)false);
        	         
-				AddButton(413, 623, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 623, 9780);
+		AddButton(413, 623, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
+                AddItem(453, 623, 0x180F, 0x496);
                 AddHtml( 493, 623, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Invulnerability</BASEFONT></BODY>", (bool)false, (bool)false);
                 
-				AddButton(413, 655, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(453, 655, 9780);
+		AddButton(413, 655, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
+                AddItem(453, 655, 0x23BD, 0x48D);
                 AddHtml( 493, 655, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Mana (L)</BASEFONT></BODY>", (bool)false, (bool)false);
 
                 //  button - image - html (0 + 40 + 40) row witdh differences*** Height (0-72+0)   Add Button 645 (715), 372 (300), Add Image 685 (645), 367 (295), Add HTML 725 (685), 372 (300), 
                 
                 
                 AddButton(705, 335, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(745, 335, 9780);
+                AddItem(745, 335, 0x180F, 0x48D);
                 AddHtml( 785, 335, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Mana</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(705, 367, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(745, 367, 9780);
+                AddItem(745, 367, 0x2406, 0x48D);
                 AddHtml( 785, 367, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Mana (G)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(705, 399, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(745, 399, 9780);
+                AddItem(745, 399, 0x180F, 1109);
                 AddHtml( 785, 399, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Night Sight</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(705, 431, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(745, 431, 9780);
+                AddItem(745, 431, 0x0F0B);
                 AddHtml( 785, 431, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Refresh</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(705, 463, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(745, 463, 9780);
+                AddItem(745, 463, 0x25FF);
                 AddHtml( 785, 463, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Refresh, Total</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(705, 495, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(745, 495, 9780);
+                AddItem(745, 495, 0x23BD, 0x48E);
                 AddHtml( 785, 495, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Rejuvenate (L)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(705, 527, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(745, 527, 9780);
+                AddItem(745, 527, 0x180f, 0x48E );
                 AddHtml( 785, 527, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Rejuvenate</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(705, 559, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(745, 559, 9780);
+                AddItem(745, 559, 0x2406, 0x48E);
                 AddHtml( 785, 559, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Rejuvenate (G)</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(705, 591, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(745, 591, 9780);
+                AddItem(745, 591, 0x0F09);
                 AddHtml( 785, 591, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Strength</BASEFONT></BODY>", (bool)false, (bool)false);
                 
                 AddButton(705, 623, buttonVal(val, bag), buttonVal(val, bag), val, GumpButtonType.Reply, 0); val++;
-                AddImage(745, 623, 9780);
+                AddItem(745, 623, 0x25F7);
                 AddHtml( 785, 623, 153, 20, @"<BODY><BASEFONT Color=" + color + ">Strength (G)</BASEFONT></BODY>", (bool)false, (bool)false);
             }
 
@@ -407,7 +407,7 @@ namespace Server.Items
 
                 if ( vertical )
                 {
-                    if ( overHalf ){ AddImage(10, -18, 10903); } else { AddImage(0, 0, 10902); }
+                    if ( overHalf ){ AddImage(10, -18, 30087); } else { AddImage(0, 0, 10902); }
 
                     int mod = 34;
 
