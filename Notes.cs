@@ -12,3 +12,9 @@
 
 // Todo chemist bar 
 
+//On Alchemist bar Gump: 
+
+//img = X
+
+//X is cycling as if every potion had a gump representing it. AddItem does not work.
+
