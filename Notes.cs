@@ -10,5 +10,5 @@
 // Add HTML : AddHtml(int x, int y, int width, int height, string text, bool background, bool scrollbar)
 
 
-// There no Gump for potion and i believe that Potion color and name are fabricated during a certain script. Using hex id didn't work ... i'm missing something i guess
+// Todo chemist bar 
 
